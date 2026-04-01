@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS</title>
+        <style>
+            body {
+                background-color: #f0f2f5; /* နည်းပညာဆန်တဲ့ မီးခိုးနုရောင် */
+                font-family: sans-serif;    /* စာလုံးအလှပြောင်းခြင်း */
+            }
+            h1 {
+                color: #2c3e50;            /* ခေါင်းစဉ်ကို အပြာရင့်ရောင်ပြောင်းခြင်း */
+                text-align: center;         /* စာသားကို အလယ်ပို့ခြင်း */
+            }
+            /* ၁။ Navigation Menu ကို အလှပြင်ခြင်း */
+            nav {
+                background-color: #333; /* အနက်ရောင်နောက်ခံ */
+                padding: 10px;          /* အတွင်းဘက် အကွာအဝေး */
+            }
+
+            nav ul li a {
+                color: white;           /* စာသားကို အဖြူရောင်ပြောင်းခြင်း */
+                text-decoration: none;  /* မျဉ်းတားတာကို ဖြုတ်ခြင်း */
+                margin-right: 20px;     /* Link တစ်ခုနဲ့တစ်ခုကြား အကွာအဝေး */
+            }
+
+            /* ၂။ Article အပိုင်းကို ထင်ရှားစေခြင်း */
+            article {
+                background-color: white;
+                padding: 20px;
+                margin: 100px 0;
+                border-radius: 8px;     /* ထောင့်လေးတွေကို ဝိုင်းစေခြင်း */
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* အရိပ်လေး ထည့်ခြင်း */
+            }
+
+            /* ၃။ Footer ကို သေသပ်စေခြင်း */
+            footer {
+                text-align: center;
+                font-size: 0.8rem;
+                color: #7f8c8d;
+            }
+            /* ၁။ Article ထဲက ခေါင်းစဉ်ငယ်တွေကို အရောင်ပြောင်းမယ် */
+            section h3 {
+                color: #e67e22;       /* လိမ္မော်ရင့်ရောင် (Highlighter သဘောမျိုး) */
+                border-bottom: 2px solid #eee; /* အောက်က မျဉ်းတားလေး ထည့်မယ် */
+                padding-bottom: 5px;
+            }
+
+            /* ၂။ စာသားတွေကို ဖတ်ရတာ သက်သောင့်သက်သာ ဖြစ်စေမယ် */
+            p {
+                color: #34495e;       /* ခဲရောင်ရင့်ရောင် (မျက်လုံး မညောင်းစေဘူး) */
+                line-height: 1.6;     /* စာကြောင်း တစ်ကြောင်းနဲ့ တစ်ကြောင်းကြား အကွာအဝေး */
+            }
+            .download-btn {
+                display: inline-block;    /* ခလုတ်ကို ပုံသဏ္ဌာန်ဖော်လို့ရအောင် လုပ်ခြင်း */
+                background-color: #27ae60; /* အစိမ်းရောင် (အောင်မြင်မှု သဘောဆောင်သည်) */
+                color: white;             /* စာသားအရောင် */
+                padding: 12px 24px;       /* အတွင်းသား ဖောင်းကြွစေခြင်း */
+                text-decoration: none;    /* မျဉ်းတား ဖြုတ်ခြင်း */
+                border-radius: 30px;      /* ထောင့်တွေကို လုံးဝဝိုင်းသွားစေခြင်း (Pill shape) */
+                font-weight: bold;        /* စာသားကို အထူထားခြင်း */
+                transition: 0.3s;         /* ပြောင်းလဲမှု ဖြစ်တဲ့အခါ ငြိမ့်ညောင်းစေခြင်း */
+                margin-top: 15px;         /* အပေါ်ကစာသားနဲ့ ခွာခြင်း */
+            }
+
+            /* Mouse နဲ့ ခလုတ်ပေါ် တင်လိုက်တဲ့အခါ (Hover Effect) */
+            .download-btn:hover {
+                background-color: #2ecc71; /* အရောင် နည်းနည်း လင်းလာမယ် */
+                box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4); /* အရိပ်လေး ကြွလာမယ် */
+                transform: translateY(-2px); /* အပေါ်ကို နည်းနည်းလေး ကြွတက်သွားမယ် */
+            }
+            /* Navigation Container ကို Flex လုပ်ခြင်း */
+            nav ul {
+                display: flex;             /* ဒါက Magic ခလုတ်ပါပဲ၊ အရာအားလုံး ဘေးတိုက် ဖြစ်သွားမယ် */
+                list-style: none;          /* အစက်ကလေးတွေကို ဖြုတ်ခြင်း */
+                padding: 0;
+                justify-content: space-around; /* Menu တစ်ခုနဲ့တစ်ခုကြား အကွာအဝေးကို ညီအောင် ဖြန့်ချခြင်း */
+                background-color: #2c3e50;
+                border-radius: 10px;
+            }
+
+            nav ul li a {
+                color: white;
+                text-decoration: none;
+                padding: 15px 20px;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1>Day2</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <hr>
+                    <li><a href="#">About</a></li>
+                    <hr>
+                    <li><a href="#">Services</a></li>
+                    <hr>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article>
+                <h2>This is my Day3 challenge</h2>
+                <section>
+                    <h3>This is the first section of the article</h3>
+                    <p>I think this section is good to use for multiple articles.</p>
+                </section>
+                <section>
+                    <h3>This is the second section of the article</h3>
+                    <p>I don't think this was necessary but I'm use it.</p>
+                </section>
+            </article>
+            <a href="#" class="download-btn">Download Textbook</a>
+            <aside>
+                <h3>This is an aside</h3>
+                <p>This is some additional information that is related to the main content.</p>
+            </aside>
+        </main>
+        <footer>
+            <p>copyright &copy; 2026.26.May Day3</p>
+        </footer>
+    </body>
+</html>
